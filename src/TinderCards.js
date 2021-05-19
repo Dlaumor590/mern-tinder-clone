@@ -14,9 +14,13 @@ function TinderCards() {
             url:'https://www.forbes.fr/wp-content/uploads/2021/04/gettyimages-950750900-1.jpg',
         }
     ])
-    const swiped = (direction, nameToDelete)=>{
-
-    }
+    const swiped = (direction, nameToDelete) => {
+        console.log('removing :' + nameToDelete);
+        //setLastDirection(direction);
+    };
+    const outOfFrame = (name) => {
+        console.log(name + ' left the screen!!');
+    };
     return (
         <div className='tinderCards' >
             <div className='tinderCards__cardContainer' >
@@ -26,9 +30,14 @@ function TinderCards() {
                     key={person.name}
                     preventSwipe={['up', 'down']}
                     onSwipe={(dir) => swiped(dir, person.name)}
-                    onCardLeftScreen={()=>outOfFrame(persons.name)}
+                    onCardLeftScreen={()=>outOfFrame(person.name)}
                 >
-
+                    <div
+                        style={{backgroudImage: `url(${person.url})`}}
+                        className='card'
+                    >
+                        <h3>{person.name}</h3>
+                    </div>
                 </TinderCard>
             ))}
             </div>           
