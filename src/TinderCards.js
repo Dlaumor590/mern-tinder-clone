@@ -1,10 +1,37 @@
-import React from 'react';
+import { SwipeableDrawer } from '@material-ui/core';
+import React, { useState } from 'react';
+import TinderCard from 'react-tinder-card';
 import './TinderCards.css';
 
 function TinderCards() {
+    const [people, setPeople] = useState([
+        {
+            name: 'Elon Musk',
+            url:'https://upload.wikimedia.org/wikipedia/commons/e/ed/Elon_Musk_Royal_Society.jpg',
+        },
+        {
+            name: 'Jeff Bezos',
+            url:'https://www.forbes.fr/wp-content/uploads/2021/04/gettyimages-950750900-1.jpg',
+        }
+    ])
+    const swiped = (direction, nameToDelete)=>{
+
+    }
     return (
-        <div className='tinderCard' >
-            
+        <div className='tinderCards' >
+            <div className='tinderCards__cardContainer' >
+            {people.map(person => (
+                <TinderCard
+                    className='swipe'
+                    key={person.name}
+                    preventSwipe={['up', 'down']}
+                    onSwipe={(dir) => swiped(dir, person.name)}
+                    onCardLeftScreen={()=>outOfFrame(persons.name)}
+                >
+
+                </TinderCard>
+            ))}
+            </div>           
         </div>
     )
 }
