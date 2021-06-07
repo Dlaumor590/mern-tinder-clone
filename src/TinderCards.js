@@ -7,12 +7,17 @@ function TinderCards() {
     const [people, setPeople] = useState([
         {
             name: 'Elon Musk',
-            url: 'https://upload.wikimedia.org/wikipedia/commons/e/ed/Elon_Musk_Royal_Society.jpg',
+            url: 'https://cdn.pixabay.com/photo/2021/05/02/02/05/elon-musk-6222396_960_720.jpg',
         },
         {
             name: 'Jeff Bezos',
             url: 'https://www.forbes.fr/wp-content/uploads/2021/04/gettyimages-950750900-1.jpg',
+        },
+        {
+            name: 'Mia Khalifa',
+            url:'https://cdn.pixabay.com/photo/2021/04/08/09/14/actress-6161118_960_720.png'
         }
+
     ]);
     
     const swiped = (direction, nameToDelete) => {
