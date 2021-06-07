@@ -1,10 +1,10 @@
-import { SwipeableDrawer } from '@material-ui/core';
+//import { SwipeableDrawer } from '@material-ui/core';
 import React, { useState } from 'react';
 import TinderCard from 'react-tinder-card';
 import './TinderCards.css';
 
 function TinderCards() {
-    const [people, setPeople] = useState([
+    const [people] = useState([
         {
             name: 'Elon Musk',
             url: 'https://cdn.pixabay.com/photo/2021/05/02/02/05/elon-musk-6222396_960_720.jpg',
@@ -15,7 +15,7 @@ function TinderCards() {
         },
         {
             name: 'Mia Khalifa',
-            url:'https://cdn.pixabay.com/photo/2021/04/08/09/14/actress-6161118_960_720.png'
+            url:'https://cdn.pixabay.com/photo/2021/04/08/09/14/actress-6161118_960_720.png',
         }
 
     ]);
@@ -39,7 +39,7 @@ function TinderCards() {
                     onCardLeftScreen={()=>outOfFrame(person.name)}
                 >
                     <div
-                        style={{backgroudImage: `url(${person.url})`}}
+                        style={{backgroundImage: `url(${person.url})`}}
                         className='card'
                     >
                         <h3>{person.name}</h3>
