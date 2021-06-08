@@ -16,6 +16,10 @@ function TinderCards() {
         {
             name: 'Mia Khalifa',
             url:'https://cdn.pixabay.com/photo/2021/04/08/09/14/actress-6161118_960_720.png',
+        },
+        {
+            name: 'Diane Doni',
+            url:'https://scontent.flfw1-1.fna.fbcdn.net/v/t1.6435-9/52666800_847358125602191_8494094316640141312_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=J6I1bLUjiaUAX9sQTuG&_nc_ht=scontent.flfw1-1.fna&oh=955f083c2e7188654740a04db87d6220&oe=60E36EC3',
         }
 
     ]);
